@@ -1,0 +1,324 @@
+Agenda
+
+Python Introduction
+Who uses Python
+Python Features
+Operators in Python
+Datatypes in Python
+Flow Control
+Functions in Python
+File Handling in Python
+
+
+Python Introduction
+-------------------
+Python was created by Ghido Rossum in 1989 and is very easy to learn.
+Python is an interpreted, object oriented, high-level programming language with dynamic semantics.
+
+
+Who uses Python?
+----------------
+youtube
+Google
+Dropbox
+Raspberry
+BitTorrent
+NASA
+NSA(National Security Academy)
+Netflix
+
+
+Youtube - The popular YouTube video sharing service is largely written in Python.
+Google - Google makes extensive use of Python in its web search systems.
+Dropbox - Dropbox storage service codes both its server and desktop client software primarily in Python.
+Raspberry - The Raspberry Pi single board computer promotes Python as its educational language.
+BitTorrent - BitTorrent peer-to-peer file sharing system began its life as a Python program.
+NASA,Los Alamos, Fermilab, JPL and others use Python for scientific programming tasks.
+The NSA uses Python for crytography and intelligence analysis.
+Netflix and Yelp have both documented the role of Python in their software infrastructure.
+
+
+Python Features
+---------------
+-Simple and easy to learn(resemble to english)
+-Free and open source
+ Python is an example of a FLOSS(Free/Library and open source software) which means one can freely distribute copies of this software, read it's source code, modify it, etc.
+-High level language
+ One does not need to bother about the low-level details like memory allocation etc. while writing Python script
+-Portable
+ Supported by many platforms like Linux, Windows, FreeBSD, Macintosh, Solaris, OS/2, Amiga, AROS, BeOS,OS/390, PlayStation, Windows CE etc.
+-Supports different Programming Paradigm
+ Python supports procedure-oriented programming as well as object-oriented programming.
+-Extensible
+ Python code can invoke c and c++ libraries, can be called from and C++ programs, can integrate with Java and .NET components.
+
+
+
+download pycharm - as default "IDLE" is not ideal for big projects
+Community - free
+Professional - Paid one
+
+
+Operators in Python
+--------------------
+Arithmetic Operators
+Assignment Operators
+Comparison Operators
+Logical Operators
+Bitwise Operators
+Identity Operators
+Membership Operators
+
+Arithmetic operator example
+---------------------------
+num1 = 10
+num2 = 20
+print("Num1 + Num2=",num1+num2)
+print('5^3 = ',5**3)  //125
+print("22//7",22/7)  //3 instead of 3.14
+print('3.8//2',3.8//2) //1
+
+no need to declare variable
+doesn't matter whether it is single or double quote
+
+comments
+---------
+# single line comment
+''' multiline comment
+
+logical 
+-------
+and
+or 
+not
+
+x=True //T capital in True and F capital in False (Reserved keywords)
+y=False
+
+
+Identity Operators
+------------------
+is - True if the operands are identical(refer to the same object)
+is not - True if the operands are not identical(do not refer to the same object)
+>>x=5
+>>x is 5
+>>x is not 5
+
+Membership operators
+--------------------
+in - True if it finds elements in the specified sequence
+Not in - True it it does not find elements in the specified sequence
+
+
+Datatype
+--------
+-Python is a loosely typed language. Therefore, no need to define the datatype of variables
+-No need to declare variables before using them
+Datatype - Immutable - Numbers,Strings,Tuples
+Datatype - Mutable - Lists, Dictionaries, Sets
+
+Numbers has 3 classifications(Integer,Float and Complex):
+example
+1)Integer  4,2 etc
+2)Float 3.4, 5.5 etc
+3)Complex 3+2j
+
+Strings:
+can use single, double or triple quotes
+for multilines, we use triple quotes
+
+Examples:
+Concatenation:
+'Python' + 'Tutorial' => 'Python Tutorial'
+Repetition:
+'Python' * 2 =>'PythonPython'
+Slicing:
+string1='Capgemini' 
+string1[2:7]=>pgemi
+Indexing:
+string1='Capgemini'
+string1[-1]+string[1] => 
+
+Type Specific Method:
+find():
+str='Edureka' -> str.find('ureka') -> 2
+replace():
+str='Edureka' -> str.replace('Ed','E') ->'Eureka'
+split():
+str='E,d,u,r,e,k,a' ->s.split(',')->['E','d','u','r','e','k','a']
+count():
+str='edureka' -> str.count('e',beg=0,end=6) -> 2
+str='edureka' -> str.count('e',0,6) -> 2
+str='Edureka' -> max(str) -> 'u'
+
+Tuples:
+-------
+A tuple is a sequence of immutable Python objects like floating number, string literals etc.
+The tuples can't be changed unlike lists
+ex.
+ myTuple=('Capgemini',2.4,5,'Python')
+
+Lists:
+------
+A list is a sequence of mutable Python objects like floating number, string, literals etc.
+The lists can be modified
+ex.
+ myList=['Python',1,2.2]
+
+append(value)
+list=[1,'a',2.5] -> list.append('d') -> [1,'a',2.5,'d']
+
+extend(list)
+list[1,'a',2.5] -> list.extend(['c','d']) -> [1,'a',2.5,'c','d']
+
+insert(index, value)
+list=[1,'a',2.5] -> list.insert(2,'b') ->[1,'a','b',2.5]
+
+pop()
+list=['a','b','c'] -> list.pop() ->['a','b']
+
+Dictionaries
+------------
+Dictionaries are perhaps the most flexible built-in data type in Python
+Dictionaries, items are stored and fetched by key, insteadof by positional offset
+ex.
+ myDict={1:'Sanjay',2:'Sandeep',3:'Neeraj'}
+More examples on Dictionary:
+empty dictionary
+ myDict = {}
+dictionary with integer keys
+ myDict={1:'apple',2:'ball}
+dictionary with mixed keys
+ myDict={'name':'John',1:[2,3,4]}
+from sequence having each item as a pair
+ myDict=dict([(1,'apple'),(2,'ball')])
+
+Note : in case of duplicate keys, latest key will be considered
+my_dict = {1:'Green',2:"Blue",3:'Red',2:'Pink'}
+
+print(my_dict) // {1:'Green',2:'Pink',3:'Red'}
+print(my_dict[3])
+
+Dictionary Methods :
+len()
+key() - will print all keys
+values() - will print all values
+update({4:'white'})
+
+
+
+Set
+---
+A set is an unordered collection of items
+Every element is unique(no duplicates) and must be immutable(which can not be changed)??????/
+mySet={1,2,3}
+
+
+
+
+if you add duplicates, those will be eliminated.
+you can have 3 operations on set :
+mySet ={1,2,3,3}  => {1,2,3}
+
+Union:
+mySet1 ={1,2,'c'}
+mySet2={1,'b','c'}
+mySet1 | mySet2 =>{1,2,'c','b'}
+
+intersection:
+mySet1 ={1,2,'c'}
+mySet2={1,'b','c'}
+
+mySet1 & mySet2 =>{1,'c'}
+
+difference:
+elements present in first set but not in second set
+mySet1 ={1,2,'c'}
+mySet2={1,'b','c'}
+
+mySet1 - mySet2 => {2}
+
+
+
+Flow Control :
+--------------
+if
+if else
+if elif else
+for
+while
+break
+continue
+
+while example :
+num=int(input('Enter the value of n = '))
+if (num<=0):
+    print("Enter a valid value")
+else:
+    sum=0
+    while(num>0):
+       sum+=num
+       num-=1
+
+print(sum)
+
+for statement :
+syntax
+ for iterator name in iterating sequence:
+    execute statements...
+
+example:
+for quant in range(99,0,-1):
+   if quant>1:
+     print(quant,"Bottles of beer on th wall,",quant,"bottles of beer")
+      if quant>2:
+         suffix=str(quant)+"bottles of beer on the wall"
+      else:
+         suffix='1 bottle of beer on the wall'
+   elif quant==1:
+     print("1 bottle of beer on the wall, 1 bottle of beer")
+     suffix ="No more beer on the wall"
+
+  print("Take one down and pass it around",suffix)
+  print("---")
+
+break example:
+count=0
+ while True:
+    print(count)
+    count+=1
+    if(count>10):
+      break
+
+continue example
+----------------
+for x in range(20):
+  if(x%2)==0:
+    continue
+  print(x)
+
+
+Function
+--------
+--------
+A function is a block of organized, reusable sets of instructions that is used to perform some related actions
+
+why do we use functions?
+-Re-usability of code minimizes redundancy
+-Procedural decomposition makes things organized
+
+Function(2 types)
+-Built-in Function
+-User Defined Function
+
+Function - Pass by reference
+Python supports call by value where the value is always an object reference, not the value of the object
+
+File handling
+-------------
+fp=open("d:\\sanjay\\python.txt",'w+')
+fp.write("Python")
+fp.seek(0)
+print(fp.read())
+fp.close()
+
